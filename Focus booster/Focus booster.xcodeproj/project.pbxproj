@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF4B32C922968EFA002AC57C /* MainEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B32C822968EFA002AC57C /* MainEntryViewController.swift */; };
+		EF4B32CB22968F44002AC57C /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B32CA22968F44002AC57C /* FinishedViewController.swift */; };
+		EF4B32CD22968FC8002AC57C /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B32CC22968FC8002AC57C /* OverviewViewController.swift */; };
 		F456760D22952A8A009D9403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456760C22952A8A009D9403 /* AppDelegate.swift */; };
 		F456760F22952A8A009D9403 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456760E22952A8A009D9403 /* ViewController.swift */; };
 		F456761222952A8A009D9403 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F456761022952A8A009D9403 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF4B32C822968EFA002AC57C /* MainEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEntryViewController.swift; sourceTree = "<group>"; };
+		EF4B32CA22968F44002AC57C /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
+		EF4B32CC22968FC8002AC57C /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		F456760922952A8A009D9403 /* Focus booster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Focus booster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F456760C22952A8A009D9403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F456760E22952A8A009D9403 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +112,9 @@
 				F456761822952A8B009D9403 /* LaunchScreen.storyboard */,
 				F456761B22952A8B009D9403 /* Info.plist */,
 				F456761322952A8A009D9403 /* Focus_booster.xcdatamodeld */,
+				EF4B32C822968EFA002AC57C /* MainEntryViewController.swift */,
+				EF4B32CA22968F44002AC57C /* FinishedViewController.swift */,
+				EF4B32CC22968FC8002AC57C /* OverviewViewController.swift */,
 			);
 			path = "Focus booster";
 			sourceTree = "<group>";
@@ -259,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF4B32CB22968F44002AC57C /* FinishedViewController.swift in Sources */,
 				F456760F22952A8A009D9403 /* ViewController.swift in Sources */,
 				F456761522952A8A009D9403 /* Focus_booster.xcdatamodeld in Sources */,
+				EF4B32C922968EFA002AC57C /* MainEntryViewController.swift in Sources */,
 				F456760D22952A8A009D9403 /* AppDelegate.swift in Sources */,
+				EF4B32CD22968FC8002AC57C /* OverviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
