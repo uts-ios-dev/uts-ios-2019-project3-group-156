@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		092E19779EB214E3891A97E9 /* Pods_Focus_boosterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11175E39343E7F762B091903 /* Pods_Focus_boosterUITests.framework */; };
 		5D664FACB6369EF5E558E550 /* Pods_Focus_booster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3266DDE447A80887DF3E67 /* Pods_Focus_booster.framework */; };
+		EF30235F22A28EB00012B2E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF30235E22A28EB00012B2E4 /* GoogleService-Info.plist */; };
 		EF4B32C922968EFA002AC57C /* MainEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B32C822968EFA002AC57C /* MainEntryViewController.swift */; };
 		EF4B32CB22968F44002AC57C /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B32CA22968F44002AC57C /* FinishedViewController.swift */; };
 		EF4B32CD22968FC8002AC57C /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B32CC22968FC8002AC57C /* OverviewViewController.swift */; };
@@ -50,6 +51,7 @@
 		AC02F4DABF54100F82F17358 /* Pods-Focus booster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus booster.release.xcconfig"; path = "Target Support Files/Pods-Focus booster/Pods-Focus booster.release.xcconfig"; sourceTree = "<group>"; };
 		CAEF39BE61A555018C473FC7 /* Pods-Focus booster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus booster.debug.xcconfig"; path = "Target Support Files/Pods-Focus booster/Pods-Focus booster.debug.xcconfig"; sourceTree = "<group>"; };
 		CC1920C94813EDB4FB04D117 /* Pods-Focus boosterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus boosterTests.debug.xcconfig"; path = "Target Support Files/Pods-Focus boosterTests/Pods-Focus boosterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF30235E22A28EB00012B2E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF4B32C822968EFA002AC57C /* MainEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEntryViewController.swift; sourceTree = "<group>"; };
 		EF4B32CA22968F44002AC57C /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
 		EF4B32CC22968FC8002AC57C /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		F456762B22952A8B009D9403 /* Focus boosterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Focus boosterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F456762F22952A8B009D9403 /* Focus_boosterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_boosterUITests.swift; sourceTree = "<group>"; };
 		F456763122952A8B009D9403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6A5ADBD22A2670400FD31F4 /* firebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,7 @@
 		F456760B22952A8A009D9403 /* Focus booster */ = {
 			isa = PBXGroup;
 			children = (
+				EF30235E22A28EB00012B2E4 /* GoogleService-Info.plist */,
 				F456760C22952A8A009D9403 /* AppDelegate.swift */,
 				F456760E22952A8A009D9403 /* ViewController.swift */,
 				F456761022952A8A009D9403 /* Main.storyboard */,
@@ -132,6 +136,7 @@
 				EF4B32C822968EFA002AC57C /* MainEntryViewController.swift */,
 				EF4B32CA22968F44002AC57C /* FinishedViewController.swift */,
 				EF4B32CC22968FC8002AC57C /* OverviewViewController.swift */,
+				F6A5ADBD22A2670400FD31F4 /* firebaseManager.swift */,
 			);
 			path = "Focus booster";
 			sourceTree = "<group>";
@@ -174,7 +179,6 @@
 				6AEC92AF7EBB8F9F9F23CFDB /* Pods-Focus boosterUITests.debug.xcconfig */,
 				8305A702A3641E80A7B89AE5 /* Pods-Focus boosterUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -288,6 +292,7 @@
 			files = (
 				F456761A22952A8B009D9403 /* LaunchScreen.storyboard in Resources */,
 				F456761722952A8B009D9403 /* Assets.xcassets in Resources */,
+				EF30235F22A28EB00012B2E4 /* GoogleService-Info.plist in Resources */,
 				F456761222952A8A009D9403 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

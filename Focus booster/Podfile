@@ -1,3 +1,5 @@
+platform :ios, '10.0'
+
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
@@ -7,6 +9,10 @@ target 'Focus booster' do
 
   # Pods for Focus booster
   pod 'Charts'
+  pod 'JOCircularSlider'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
   target 'Focus boosterTests' do
     inherit! :search_paths
     # Pods for testing
