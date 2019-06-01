@@ -1,0 +1,12 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'Focus booster' do
+        pod 'JOCircularSlider'
+        pod 'Firebase/Core'
+        pod 'Firebase/Firestore'
+        pod 'Firebase/Auth'
+end
+
+
+

@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseAuth
+
+class firebaseManager {
+    
+    static let shares = firebaseManager()
+    let db = Firestore.firestore()
+    
+    var currentUid: String? {
+        return Auth.auth().currentUser?.uid
+    }
+    
+    
+    
+   
+    
+    
+    
+}
