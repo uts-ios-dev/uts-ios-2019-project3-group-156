@@ -39,6 +39,7 @@ class OverviewViewController: UIViewController {
         let entry3 = BarChartDataEntry(x: 3.0, y: Double(number3.value))
         let dataSet = BarChartDataSet(entries: [entry1, entry2, entry3], label: "Widgets Type")
         print(dataSet)
+        dataSet.colors = ChartColorTemplates.vordiplom()
         let data = BarChartData(dataSets: [dataSet])
         self.barChart.data = data
         barChart.chartDescription?.text = "Number of Widgets by Type"
@@ -54,6 +55,19 @@ class OverviewViewController: UIViewController {
         let entry2 = PieChartDataEntry(value: Double(number2.value), label: "#2")
         let entry3 = PieChartDataEntry(value: Double(number3.value), label: "#3")
         let dataSet = PieChartDataSet(entries: [entry1, entry2, entry3], label: "Widget Types")
+        dataSet.colors = ChartColorTemplates.joyful()
+        //dataSet.valueColors = [UIColor.black]
+        pieChart.backgroundColor = UIColor.black
+        pieChart.holeColor = UIColor.clear
+        pieChart.chartDescription?.textColor = UIColor.white
+        pieChart.legend.textColor = UIColor.white
+        
+        pieChart.legend.font = UIFont(name: "Futura", size: 10)!
+        pieChart.chartDescription?.font = UIFont(name: "Futura", size: 12)!
+        pieChart.chartDescription?.xOffset = pieChart.frame.width + 30
+        pieChart.chartDescription?.yOffset = pieChart.frame.height * (2/3)
+        pieChart.chartDescription?.textAlign = NSTextAlignment.left
+        
         let data = PieChartData(dataSet: dataSet)
         pieChart.data = data
         pieChart.chartDescription?.text = "Share of Widgets by Type"
