@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092E19779EB214E3891A97E9 /* Pods_Focus_boosterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11175E39343E7F762B091903 /* Pods_Focus_boosterUITests.framework */; };
+		5D664FACB6369EF5E558E550 /* Pods_Focus_booster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3266DDE447A80887DF3E67 /* Pods_Focus_booster.framework */; };
+		EF30235F22A28EB00012B2E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF30235E22A28EB00012B2E4 /* GoogleService-Info.plist */; };
 		EF4B32C922968EFA002AC57C /* MainEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B32C822968EFA002AC57C /* MainEntryViewController.swift */; };
 		EF4B32CB22968F44002AC57C /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B32CA22968F44002AC57C /* FinishedViewController.swift */; };
 		EF4B32CD22968FC8002AC57C /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B32CC22968FC8002AC57C /* OverviewViewController.swift */; };
@@ -18,7 +21,11 @@
 		F456761A22952A8B009D9403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F456761822952A8B009D9403 /* LaunchScreen.storyboard */; };
 		F456762522952A8B009D9403 /* Focus_boosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456762422952A8B009D9403 /* Focus_boosterTests.swift */; };
 		F456763022952A8B009D9403 /* Focus_boosterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456762F22952A8B009D9403 /* Focus_boosterUITests.swift */; };
+<<<<<<< HEAD
 		F45892C622A2914000C634C0 /* AwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45892C522A2914000C634C0 /* AwardsViewController.swift */; };
+=======
+		FB51973B3218866933557A1A /* Pods_Focus_boosterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A856B49911FCB99659698334 /* Pods_Focus_boosterTests.framework */; };
+>>>>>>> c75a127d2ec10e6bcc3e048e6487713c95bcaba1
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +46,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11175E39343E7F762B091903 /* Pods_Focus_boosterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_boosterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A3266DDE447A80887DF3E67 /* Pods_Focus_booster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_booster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AEC92AF7EBB8F9F9F23CFDB /* Pods-Focus boosterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus boosterUITests.debug.xcconfig"; path = "Target Support Files/Pods-Focus boosterUITests/Pods-Focus boosterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8305A702A3641E80A7B89AE5 /* Pods-Focus boosterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus boosterUITests.release.xcconfig"; path = "Target Support Files/Pods-Focus boosterUITests/Pods-Focus boosterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A856B49911FCB99659698334 /* Pods_Focus_boosterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_boosterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A94812D9D8EDB7BFBD6E8E17 /* Pods-Focus boosterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus boosterTests.release.xcconfig"; path = "Target Support Files/Pods-Focus boosterTests/Pods-Focus boosterTests.release.xcconfig"; sourceTree = "<group>"; };
+		AC02F4DABF54100F82F17358 /* Pods-Focus booster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus booster.release.xcconfig"; path = "Target Support Files/Pods-Focus booster/Pods-Focus booster.release.xcconfig"; sourceTree = "<group>"; };
+		CAEF39BE61A555018C473FC7 /* Pods-Focus booster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus booster.debug.xcconfig"; path = "Target Support Files/Pods-Focus booster/Pods-Focus booster.debug.xcconfig"; sourceTree = "<group>"; };
+		CC1920C94813EDB4FB04D117 /* Pods-Focus boosterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus boosterTests.debug.xcconfig"; path = "Target Support Files/Pods-Focus boosterTests/Pods-Focus boosterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF30235E22A28EB00012B2E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF4B32C822968EFA002AC57C /* MainEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEntryViewController.swift; sourceTree = "<group>"; };
 		EF4B32CA22968F44002AC57C /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
 		EF4B32CC22968FC8002AC57C /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +73,11 @@
 		F456762B22952A8B009D9403 /* Focus boosterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Focus boosterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F456762F22952A8B009D9403 /* Focus_boosterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_boosterUITests.swift; sourceTree = "<group>"; };
 		F456763122952A8B009D9403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		F45892C522A2914000C634C0 /* AwardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsViewController.swift; sourceTree = "<group>"; };
+=======
+		F6A5ADBD22A2670400FD31F4 /* firebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseManager.swift; sourceTree = "<group>"; };
+>>>>>>> c75a127d2ec10e6bcc3e048e6487713c95bcaba1
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D664FACB6369EF5E558E550 /* Pods_Focus_booster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB51973B3218866933557A1A /* Pods_Focus_boosterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092E19779EB214E3891A97E9 /* Pods_Focus_boosterUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +115,8 @@
 				F456762322952A8B009D9403 /* Focus boosterTests */,
 				F456762E22952A8B009D9403 /* Focus boosterUITests */,
 				F456760A22952A8A009D9403 /* Products */,
+				FE7A28773A60C00035C50522 /* Pods */,
+				F487181937A37B71A6484635 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +133,7 @@
 		F456760B22952A8A009D9403 /* Focus booster */ = {
 			isa = PBXGroup;
 			children = (
+				EF30235E22A28EB00012B2E4 /* GoogleService-Info.plist */,
 				F456760C22952A8A009D9403 /* AppDelegate.swift */,
 				F456760E22952A8A009D9403 /* ViewController.swift */,
 				F456761022952A8A009D9403 /* Main.storyboard */,
@@ -118,6 +145,7 @@
 				EF4B32CA22968F44002AC57C /* FinishedViewController.swift */,
 				F45892C522A2914000C634C0 /* AwardsViewController.swift */,
 				EF4B32CC22968FC8002AC57C /* OverviewViewController.swift */,
+				F6A5ADBD22A2670400FD31F4 /* firebaseManager.swift */,
 			);
 			path = "Focus booster";
 			sourceTree = "<group>";
@@ -140,6 +168,29 @@
 			path = "Focus boosterUITests";
 			sourceTree = "<group>";
 		};
+		F487181937A37B71A6484635 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A3266DDE447A80887DF3E67 /* Pods_Focus_booster.framework */,
+				A856B49911FCB99659698334 /* Pods_Focus_boosterTests.framework */,
+				11175E39343E7F762B091903 /* Pods_Focus_boosterUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE7A28773A60C00035C50522 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAEF39BE61A555018C473FC7 /* Pods-Focus booster.debug.xcconfig */,
+				AC02F4DABF54100F82F17358 /* Pods-Focus booster.release.xcconfig */,
+				CC1920C94813EDB4FB04D117 /* Pods-Focus boosterTests.debug.xcconfig */,
+				A94812D9D8EDB7BFBD6E8E17 /* Pods-Focus boosterTests.release.xcconfig */,
+				6AEC92AF7EBB8F9F9F23CFDB /* Pods-Focus boosterUITests.debug.xcconfig */,
+				8305A702A3641E80A7B89AE5 /* Pods-Focus boosterUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F456763422952A8B009D9403 /* Build configuration list for PBXNativeTarget "Focus booster" */;
 			buildPhases = (
+				B33887C2A4B8E6DB677820D2 /* [CP] Check Pods Manifest.lock */,
 				F456760522952A8A009D9403 /* Sources */,
 				F456760622952A8A009D9403 /* Frameworks */,
 				F456760722952A8A009D9403 /* Resources */,
+				B4CB20897B2E6294B50FC059 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,6 +217,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F456763722952A8B009D9403 /* Build configuration list for PBXNativeTarget "Focus boosterTests" */;
 			buildPhases = (
+				472C4A841A22D13A24AED454 /* [CP] Check Pods Manifest.lock */,
 				F456761C22952A8B009D9403 /* Sources */,
 				F456761D22952A8B009D9403 /* Frameworks */,
 				F456761E22952A8B009D9403 /* Resources */,
@@ -182,6 +236,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F456763A22952A8B009D9403 /* Build configuration list for PBXNativeTarget "Focus boosterUITests" */;
 			buildPhases = (
+				C17468B1147592838167EEBF /* [CP] Check Pods Manifest.lock */,
 				F456762722952A8B009D9403 /* Sources */,
 				F456762822952A8B009D9403 /* Frameworks */,
 				F456762922952A8B009D9403 /* Resources */,
@@ -246,6 +301,7 @@
 			files = (
 				F456761A22952A8B009D9403 /* LaunchScreen.storyboard in Resources */,
 				F456761722952A8B009D9403 /* Assets.xcassets in Resources */,
+				EF30235F22A28EB00012B2E4 /* GoogleService-Info.plist in Resources */,
 				F456761222952A8A009D9403 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +321,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		472C4A841A22D13A24AED454 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Focus boosterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B33887C2A4B8E6DB677820D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Focus booster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4CB20897B2E6294B50FC059 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Focus booster/Pods-Focus booster-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Focus booster/Pods-Focus booster-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Focus booster/Pods-Focus booster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C17468B1147592838167EEBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Focus boosterUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F456760522952A8A009D9403 /* Sources */ = {
@@ -450,6 +592,7 @@
 		};
 		F456763522952A8B009D9403 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAEF39BE61A555018C473FC7 /* Pods-Focus booster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -467,6 +610,7 @@
 		};
 		F456763622952A8B009D9403 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC02F4DABF54100F82F17358 /* Pods-Focus booster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +628,7 @@
 		};
 		F456763822952A8B009D9403 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC1920C94813EDB4FB04D117 /* Pods-Focus boosterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,6 +649,7 @@
 		};
 		F456763922952A8B009D9403 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A94812D9D8EDB7BFBD6E8E17 /* Pods-Focus boosterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +670,7 @@
 		};
 		F456763B22952A8B009D9403 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AEC92AF7EBB8F9F9F23CFDB /* Pods-Focus boosterUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +690,7 @@
 		};
 		F456763C22952A8B009D9403 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8305A702A3641E80A7B89AE5 /* Pods-Focus boosterUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
