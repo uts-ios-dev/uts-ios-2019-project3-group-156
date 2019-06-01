@@ -21,11 +21,7 @@
 		F456761A22952A8B009D9403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F456761822952A8B009D9403 /* LaunchScreen.storyboard */; };
 		F456762522952A8B009D9403 /* Focus_boosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456762422952A8B009D9403 /* Focus_boosterTests.swift */; };
 		F456763022952A8B009D9403 /* Focus_boosterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456762F22952A8B009D9403 /* Focus_boosterUITests.swift */; };
-<<<<<<< HEAD
-		F45892C622A2914000C634C0 /* AwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45892C522A2914000C634C0 /* AwardsViewController.swift */; };
-=======
 		FB51973B3218866933557A1A /* Pods_Focus_boosterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A856B49911FCB99659698334 /* Pods_Focus_boosterTests.framework */; };
->>>>>>> c75a127d2ec10e6bcc3e048e6487713c95bcaba1
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,11 +69,7 @@
 		F456762B22952A8B009D9403 /* Focus boosterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Focus boosterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F456762F22952A8B009D9403 /* Focus_boosterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_boosterUITests.swift; sourceTree = "<group>"; };
 		F456763122952A8B009D9403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		F45892C522A2914000C634C0 /* AwardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsViewController.swift; sourceTree = "<group>"; };
-=======
 		F6A5ADBD22A2670400FD31F4 /* firebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseManager.swift; sourceTree = "<group>"; };
->>>>>>> c75a127d2ec10e6bcc3e048e6487713c95bcaba1
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

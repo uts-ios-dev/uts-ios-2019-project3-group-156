@@ -169,13 +169,13 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="417" id="TRe-bG-mak"/>
                                             <constraint firstAttribute="height" constant="1000" id="X95-ns-Kqr"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="bn2-IU-9ho" secondAttribute="trailing" id="49f-wq-HdW"/>
+                                    <constraint firstItem="bn2-IU-9ho" firstAttribute="centerX" secondItem="Mdr-Oe-fJF" secondAttribute="centerX" id="djo-Sy-P6g"/>
                                     <constraint firstAttribute="bottom" secondItem="bn2-IU-9ho" secondAttribute="bottom" id="nAh-P7-pqQ"/>
                                     <constraint firstItem="bn2-IU-9ho" firstAttribute="leading" secondItem="Mdr-Oe-fJF" secondAttribute="leading" id="rWj-2y-5t3"/>
                                     <constraint firstItem="bn2-IU-9ho" firstAttribute="top" secondItem="Mdr-Oe-fJF" secondAttribute="top" id="uPF-E8-2ol"/>
@@ -184,7 +184,6 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bn2-IU-9ho" firstAttribute="width" secondItem="EyE-2E-9mb" secondAttribute="width" id="KIT-XE-VCI"/>
                             <constraint firstItem="Mdr-Oe-fJF" firstAttribute="leading" secondItem="cS1-80-tY3" secondAttribute="leading" id="QpF-GW-eEM"/>
                             <constraint firstItem="Mdr-Oe-fJF" firstAttribute="bottom" secondItem="cS1-80-tY3" secondAttribute="bottom" id="mFh-r8-VLR"/>
                             <constraint firstItem="Mdr-Oe-fJF" firstAttribute="top" secondItem="EyE-2E-9mb" secondAttribute="top" id="ovQ-YS-wOK"/>
@@ -258,7 +257,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PP4-Z3-7uL">
-                                <rect key="frame" x="248" y="582" width="60" height="30"/>
+                                <rect key="frame" x="248" y="651" width="99" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -305,7 +304,7 @@
             <objects>
                 <viewController id="zHA-Nf-X6q" customClass="AwardsViewController" customModule="Focus_booster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y5B-Ff-cMZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Awards:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9v-y2-ouA">
@@ -369,7 +368,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clock" width="200" height="200"/>
+        <image name="clock" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2FC-ao-01i"/>
