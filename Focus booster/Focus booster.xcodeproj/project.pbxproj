@@ -18,6 +18,7 @@
 		F456761A22952A8B009D9403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F456761822952A8B009D9403 /* LaunchScreen.storyboard */; };
 		F456762522952A8B009D9403 /* Focus_boosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456762422952A8B009D9403 /* Focus_boosterTests.swift */; };
 		F456763022952A8B009D9403 /* Focus_boosterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456762F22952A8B009D9403 /* Focus_boosterUITests.swift */; };
+		F45892C622A2914000C634C0 /* AwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45892C522A2914000C634C0 /* AwardsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		F456762B22952A8B009D9403 /* Focus boosterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Focus boosterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F456762F22952A8B009D9403 /* Focus_boosterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_boosterUITests.swift; sourceTree = "<group>"; };
 		F456763122952A8B009D9403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F45892C522A2914000C634C0 /* AwardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				F456761322952A8A009D9403 /* Focus_booster.xcdatamodeld */,
 				EF4B32C822968EFA002AC57C /* MainEntryViewController.swift */,
 				EF4B32CA22968F44002AC57C /* FinishedViewController.swift */,
+				F45892C522A2914000C634C0 /* AwardsViewController.swift */,
 				EF4B32CC22968FC8002AC57C /* OverviewViewController.swift */,
 			);
 			path = "Focus booster";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF4B32CB22968F44002AC57C /* FinishedViewController.swift in Sources */,
+				F45892C622A2914000C634C0 /* AwardsViewController.swift in Sources */,
 				F456760F22952A8A009D9403 /* ViewController.swift in Sources */,
 				F456761522952A8A009D9403 /* Focus_booster.xcdatamodeld in Sources */,
 				EF4B32C922968EFA002AC57C /* MainEntryViewController.swift in Sources */,
