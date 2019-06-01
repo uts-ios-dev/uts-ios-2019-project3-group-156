@@ -1,0 +1,6 @@
+framework module Pods_Focus_boosterUITests {
+  umbrella header "Pods-Focus boosterUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
