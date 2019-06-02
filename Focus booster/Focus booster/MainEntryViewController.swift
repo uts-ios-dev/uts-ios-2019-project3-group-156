@@ -110,6 +110,8 @@ class MainEntryViewController: UIViewController {
             
             timerSentence?.invalidate()
             timerSentence = nil
+            
+            alertFinish()
             return
         }
         
@@ -136,9 +138,6 @@ class MainEntryViewController: UIViewController {
         self.sentenceLabel.text = sentence
         
     }
-    
-    
-   
     
     func checkBeginTime() -> Bool{
         
@@ -198,32 +197,26 @@ class MainEntryViewController: UIViewController {
     }
     
     @IBAction func tappedGiveup(_ sender: Any) {
-        endGame()
-        
-        // end timer
-        timer?.invalidate()
-        timer = nil
-            
-        timerSentence?.invalidate()
-        timerSentence = nil
-        
+        alertGiveUp()
+    }
+    
+    func pushToNext(){
         // push to next page
         let finishedVC = FinishedViewController()
         self.present(finishedVC, animated: true, completion: nil)
         //self.navigationController?.pushViewController(finishedVC, animated: true)
         
-        // set begin button
-        /*
-        beginBtn.isEnabled = true
-        beginBtn.isHidden = false
-        giveUpBtn.isEnabled = false
-        giveUpBtn.isHidden = true
- */
     }
     
     func endGame(){
         
         self.giveUpBtn.isHidden = true
+        
+        // end timer
+        timer?.invalidate()
+        timer = nil
+        timerSentence?.invalidate()
+        timerSentence = nil
         
         // store data
         let timeToStore = timeSetted * 60 - timeRemaining
@@ -234,13 +227,24 @@ class MainEntryViewController: UIViewController {
     }
     
     func alertGiveUp(){
-        
+        let alert = UIAlertController(title: "Will you Give Up?", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "NO", style: .cancel, handler: { (UIAlertAction) in
+            
+        }))
+        alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (UIAlertAction) in
+            self.endGame()
+            self.pushToNext()
+        }))
+        present(alert, animated: true)
     }
     
     
     func alertFinish(){
         let alert = UIAlertController(title: "Game is Over", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (UIAlertAction) in
+            self.endGame()
+            self.pushToNext()
+        }))
         present(alert, animated: true)
         
     }
