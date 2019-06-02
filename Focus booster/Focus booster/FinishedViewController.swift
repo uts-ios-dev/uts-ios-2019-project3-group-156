@@ -8,7 +8,7 @@
 
 
 import UIKit
-let score = 5
+
 
 class FinishedViewController: UIViewController {
     
@@ -17,23 +17,39 @@ class FinishedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scoreLabel.text = "\(score)"
         
-        if(score <= 10){
-            awards.image = UIImage(named:"zero")
-        }else if (score <= 20){
-            awards.image = UIImage(named:"one")
-        }else if (score <= 40){
-            awards.image = UIImage(named:"two")
-        }else if (score <= 70){
-            awards.image = UIImage(named:"three")
-        }else if (score <= 110){
-            awards.image = UIImage(named:"four")
-        }else if (score <= 160){
-            awards.image = UIImage(named:"five")
-        }
+        FireBaseManager.shares.getGameTime(completion: { (data) in
+            for result in data{
+                let score = result["score"] as! Int
+                
+                if (score != nil){
+                    self.scoreLabel.text = "\(score)"
+                    
+                    if(score <= 10){
+                        self.awards.image = UIImage(named:"zero")
+                    }else if (score <= 20){
+                        self.awards.image = UIImage(named:"one")
+                    }else if (score <= 40){
+                        self.awards.image = UIImage(named:"two")
+                    }else if (score <= 70){
+                        self.awards.image = UIImage(named:"three")
+                    }else if (score <= 110){
+                        self.awards.image = UIImage(named:"four")
+                    }else if (score > 110){
+                        self.awards.image = UIImage(named:"five")
+                    }
+                
+            }
+            }
+        })
+        
+        
        
     }
     
+    @IBAction func taskLabelButton(_ sender: Any) {
+        
     
+        
+    }
 }

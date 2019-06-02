@@ -23,14 +23,14 @@ class ViewController: UIViewController {
         defaults = UserDefaults.standard
         self.labelName.text = inputTag.text;
         if (labelName.text != "") {
-            defaults!.set(labelName.text,forKey: "playerName")
+            defaults!.set(labelName.text,forKey: "Tag")
             //detect if the "currentName" is invalid
-            if (defaults!.object(forKey: "playerName") != nil) {
-                saveNameFromDefaults = defaults!.object(forKey: "playerName") as? String
-                UserDefaults.standard.set(saveNameFromDefaults, forKey: "currentName")
+            if (defaults!.object(forKey: "Tag") != nil) {
+                saveNameFromDefaults = defaults!.object(forKey: "Tag") as? String
+                UserDefaults.standard.set(saveNameFromDefaults, forKey: "currentTag")
             } else {
                 saveNameFromDefaults = "default"
-                UserDefaults.standard.set(saveNameFromDefaults, forKey: "currentName")
+                UserDefaults.standard.set(saveNameFromDefaults, forKey: "currentTag")
             }
     }
     
