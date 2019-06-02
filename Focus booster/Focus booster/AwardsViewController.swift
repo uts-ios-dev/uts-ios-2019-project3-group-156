@@ -2,7 +2,7 @@
 //  AwardsViewController.swift
 //  Focus booster
 //
-//  Created by Theron Ann on 1/6/19.
+//  Created by Theron Ann on 2/6/19.
 //  Copyright © 2019 Theron Ann. All rights reserved.
 //
 
@@ -14,14 +14,18 @@ class AwardsViewController: UIViewController {
     @IBOutlet weak var trdImage: UIImageView!
     
     @IBOutlet weak var forthImage: UIImageView!
-   
+    
     @IBOutlet weak var fifthImage: UIImageView!
     @IBOutlet weak var sixthImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     let score = 0
-        
+        FireBaseManager.shares.getGameTime(completion: { (data) in
+            for result in data{
+                let score = result["score"] as! Int
+                
+                if (score != nil){
+
         if(score <= 10){
             firstImage.image = UIImage(named:"zero")
             secondImage.image = UIImage(named:"unknow")
@@ -65,19 +69,11 @@ class AwardsViewController: UIViewController {
             fifthImage.image = UIImage(named:"four")
             sixthImage.image = UIImage(named:"five")
         }
-        
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+                }
+            }
+        }
+    )
 }
+        // Do any additional setup after loading the view.
+}
+
