@@ -84,8 +84,12 @@ class MainEntryViewController: UIViewController {
             circularSlider.startAngle = 230
             circularSlider.endAngle = 310
             circularSlider.minimumValue = 0
-            circularSlider.maximumValue = 60
+            circularSlider.maximumValue = 120
             circularSlider.isClockwise = false
+            circularSlider.color2 = UIColor.blue
+            circularSlider.color3 = UIColor.black
+      
+          
             
             circularSlider.backgroundColor = UIColor.gray
             self.view.addSubview(circularSlider)

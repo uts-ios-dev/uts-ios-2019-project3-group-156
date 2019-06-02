@@ -18,30 +18,35 @@ class FinishedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var totalScore = 0
         FireBaseManager.shares.getGameTime(completion: { (data) in
             for result in data{
                 if (result["score"] != nil){
                     
                     let score = result["score"] as! Int
-                    self.scoreLabel.text = "\(score)"
+                    //self.scoreLabel.text = "\(score)"
+                    totalScore += score
                     
-                    
-                    if(score <= 10){
-                        self.awards.image = UIImage(named:"zero")
-                    }else if (score <= 20){
-                        self.awards.image = UIImage(named:"one")
-                    }else if (score <= 40){
-                        self.awards.image = UIImage(named:"two")
-                    }else if (score <= 70){
-                        self.awards.image = UIImage(named:"three")
-                    }else if (score <= 110){
-                        self.awards.image = UIImage(named:"four")
-                    }else if (score > 110){
-                        self.awards.image = UIImage(named:"five")
-                    }
+                   
                 
+                }
             }
+            
+            if(totalScore <= 10){
+                self.awards.image = UIImage(named:"zero")
+            }else if (totalScore <= 20){
+                self.awards.image = UIImage(named:"one")
+            }else if (totalScore <= 40){
+                self.awards.image = UIImage(named:"two")
+            }else if (totalScore <= 70){
+                self.awards.image = UIImage(named:"three")
+            }else if (totalScore <= 110){
+                self.awards.image = UIImage(named:"four")
+            }else if (totalScore > 110){
+                self.awards.image = UIImage(named:"five")
             }
+            
+            self.scoreLabel.text = "\(totalScore)"
         })
         
         
