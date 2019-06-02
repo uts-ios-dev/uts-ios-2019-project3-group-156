@@ -1,18 +1,11 @@
-//
-//  firebaseManager.swift
-//  Focus booster
-//
-//  Created by Ke Zhang on 1/6/19.
-//  Copyright © 2019 Theron Ann. All rights reserved.
-//
 
 import Foundation
 import Firebase
 import FirebaseAuth
 
-class firebaseManager {
+class FireBaseManager {
     
-    static let shares = firebaseManager()
+    static let shares = FireBaseManager()
     let db = Firestore.firestore()
     
     var currentUid: String? {

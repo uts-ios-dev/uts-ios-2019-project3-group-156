@@ -9,40 +9,77 @@
 import UIKit
 import Charts
 
-
 class OverviewViewController: UIViewController {
     @IBOutlet weak var number1: UISlider!
     @IBOutlet weak var number2: UISlider!
     @IBOutlet weak var number3: UISlider!
-
-   
+    
+    var timeAnalysisData = [String:Double]()
+    var scoreAnalysisData = [String:Double]()
+    
     @IBOutlet weak var barChart: BarChartView!
     @IBOutlet weak var pieChart: PieChartView!
-    
+
     @IBAction func renderCharts() {
         barChartUpdate()
         pieChartUpdate()
+    
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        FireBaseManager.shares.getGameTime(completion: { (data) in
+            for result in data{
+                if let tag = result["tag"] as? String,
+                    let time = result["time"] as? Double,
+                    let score = result["score"] as? Double{
+                    if(!self.timeAnalysisData.keys.contains(tag)){
+                        self.timeAnalysisData[tag] = time;
+                    }else{
+                        self.timeAnalysisData[tag] = self.timeAnalysisData[tag]! + time;
+                    }
+                    
+                    if(!self.scoreAnalysisData.keys.contains(tag)){
+                        self.scoreAnalysisData[tag] = score;
+                    }else{
+                        self.scoreAnalysisData[tag] = self.scoreAnalysisData[tag]! + score;
+                    }
+                    
+                }
+            }
+        })
+        
         barChartUpdate()
         pieChartUpdate()
+      
         // Do any additional setup after loading the view, typically from a nib.
     }
     func barChartUpdate () {
-        //future home of bar chart code
-        print(self.number1.value)
-        print(self.number2.value)
-        print(self.number3.value)
-        let entry1 = BarChartDataEntry(x: 1.0, y: Double(number1.value))
-        let entry2 = BarChartDataEntry(x: 2.0, y: Double(number2.value))
-        let entry3 = BarChartDataEntry(x: 3.0, y: Double(number3.value))
-        let dataSet = BarChartDataSet(entries: [entry1, entry2, entry3], label: "Widgets Type")
+        var barChartEntries = [BarChartDataEntry]()
+        var counter:Double = 1
+        for (key,value) in self.scoreAnalysisData {
+            //print("\(key): \(value)")
+            barChartEntries.append(BarChartDataEntry(x:counter,y:value))
+            counter += 1
+        }
+        
+        let dataSet = BarChartDataSet(entries: barChartEntries, label: "Types")
         print(dataSet)
+        
+        var formatter = ChartStringFormatter()
+        var names:[String] = []
+        for key in self.scoreAnalysisData.keys{
+            names.append(key)
+        }
+        print(names)
+        formatter.nameValues = names
+        barChart.xAxis.valueFormatter = formatter
+        barChart.xAxis.granularity = 1
+        
         dataSet.colors = ChartColorTemplates.vordiplom()
         let data = BarChartData(dataSets: [dataSet])
         self.barChart.data = data
-        barChart.chartDescription?.text = "Number of Widgets by Type"
+        barChart.chartDescription?.text = "Number of Types"
         
         //All other additions to this function will go here
         
@@ -54,7 +91,7 @@ class OverviewViewController: UIViewController {
         let entry1 = PieChartDataEntry(value: Double(number1.value), label: "#1")
         let entry2 = PieChartDataEntry(value: Double(number2.value), label: "#2")
         let entry3 = PieChartDataEntry(value: Double(number3.value), label: "#3")
-        let dataSet = PieChartDataSet(entries: [entry1, entry2, entry3], label: "Widget Types")
+        let dataSet = PieChartDataSet(entries: [entry1, entry2, entry3], label: "Types")
         dataSet.colors = ChartColorTemplates.joyful()
         //dataSet.valueColors = [UIColor.black]
         pieChart.backgroundColor = UIColor.black
@@ -70,7 +107,7 @@ class OverviewViewController: UIViewController {
         
         let data = PieChartData(dataSet: dataSet)
         pieChart.data = data
-        pieChart.chartDescription?.text = "Share of Widgets by Type"
+        pieChart.chartDescription?.text = "Task Type"
         
         //All other additions to this function will go here
         
