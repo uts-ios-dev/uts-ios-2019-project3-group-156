@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -98,18 +98,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-Dd-gQM">
-                                <rect key="frame" x="181" y="544" width="52" height="35"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="Begin">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="tappedBegin:" destination="2mf-Rc-3UP" eventType="touchUpInside" id="eUE-c6-anY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxt-k2-U04">
-                                <rect key="frame" x="118" y="587" width="178" height="30"/>
+                                <rect key="frame" x="0.0" y="560" width="414" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kPY-1C-vMb"/>
+                                </constraints>
                                 <state key="normal" title="Give Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -118,33 +111,51 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfl-T5-azi">
-                                <rect key="frame" x="93" y="57" width="228" height="21"/>
+                                <rect key="frame" x="0.0" y="70" width="414" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="nf6-gJ-1xF"/>
+                                    <constraint firstAttribute="height" constant="40" id="HfN-lj-X3O"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvm-Vv-jaF">
-                                <rect key="frame" x="184" y="625" width="46" height="20"/>
+                                <rect key="frame" x="0.0" y="530" width="414" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LN8-gM-GfV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-Dd-gQM">
+                                <rect key="frame" x="0.0" y="560" width="414" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zRZ-To-iJy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Begin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedBegin:" destination="2mf-Rc-3UP" eventType="touchUpInside" id="eUE-c6-anY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.39254450800000001" green="0.57576900720000002" blue="0.60393053289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Zfl-T5-azi" firstAttribute="centerX" secondItem="DR7-jK-pFP" secondAttribute="centerX" id="1eX-5C-hVc"/>
-                            <constraint firstItem="vvm-Vv-jaF" firstAttribute="top" secondItem="kxt-k2-U04" secondAttribute="bottom" constant="8" symbolic="YES" id="6S3-qq-6ME"/>
-                            <constraint firstAttribute="bottom" secondItem="kxt-k2-U04" secondAttribute="bottom" constant="119" id="91N-aX-IgF"/>
-                            <constraint firstItem="Zfl-T5-azi" firstAttribute="leading" secondItem="DR7-jK-pFP" secondAttribute="leading" constant="93" id="Aad-Av-pdh"/>
-                            <constraint firstItem="kxt-k2-U04" firstAttribute="leading" secondItem="DR7-jK-pFP" secondAttribute="leading" constant="118" id="GX7-W3-lDY"/>
-                            <constraint firstItem="Zfl-T5-azi" firstAttribute="centerX" secondItem="kxt-k2-U04" secondAttribute="centerX" id="QIP-4m-If6"/>
-                            <constraint firstItem="Zfl-T5-azi" firstAttribute="top" secondItem="DR7-jK-pFP" secondAttribute="top" constant="37" id="RoY-RP-VbR"/>
-                            <constraint firstItem="Zfl-T5-azi" firstAttribute="centerX" secondItem="CHX-Dd-gQM" secondAttribute="centerX" id="WXl-6W-bR3"/>
-                            <constraint firstItem="kxt-k2-U04" firstAttribute="top" secondItem="CHX-Dd-gQM" secondAttribute="bottom" constant="8" symbolic="YES" id="lpF-Xm-AcB"/>
-                            <constraint firstItem="Zfl-T5-azi" firstAttribute="centerX" secondItem="vvm-Vv-jaF" secondAttribute="centerX" id="wgV-wo-66B"/>
+                            <constraint firstItem="Zfl-T5-azi" firstAttribute="leading" secondItem="DR7-jK-pFP" secondAttribute="leading" id="0vZ-5j-PxI"/>
+                            <constraint firstItem="CHX-Dd-gQM" firstAttribute="leading" secondItem="DR7-jK-pFP" secondAttribute="leading" id="35E-mr-xGq"/>
+                            <constraint firstItem="kxt-k2-U04" firstAttribute="leading" secondItem="DR7-jK-pFP" secondAttribute="leading" id="7gn-DF-KrJ"/>
+                            <constraint firstItem="Zfl-T5-azi" firstAttribute="top" secondItem="8jo-2N-TrF" secondAttribute="topMargin" constant="50" id="7zc-Md-AV0"/>
+                            <constraint firstItem="vvm-Vv-jaF" firstAttribute="top" secondItem="8jo-2N-TrF" secondAttribute="topMargin" constant="510" id="887-26-Ubr"/>
+                            <constraint firstItem="Zfl-T5-azi" firstAttribute="trailing" secondItem="DR7-jK-pFP" secondAttribute="trailing" id="A2C-zh-bQM"/>
+                            <constraint firstItem="kxt-k2-U04" firstAttribute="top" secondItem="vvm-Vv-jaF" secondAttribute="bottom" id="K7f-zb-mnZ"/>
+                            <constraint firstItem="DR7-jK-pFP" firstAttribute="trailing" secondItem="vvm-Vv-jaF" secondAttribute="trailing" id="QAl-NX-Cao"/>
+                            <constraint firstItem="vvm-Vv-jaF" firstAttribute="leading" secondItem="8jo-2N-TrF" secondAttribute="leading" id="WKO-Ip-Mj3"/>
+                            <constraint firstItem="DR7-jK-pFP" firstAttribute="trailing" secondItem="CHX-Dd-gQM" secondAttribute="trailing" id="XMX-fr-gQs"/>
+                            <constraint firstItem="DR7-jK-pFP" firstAttribute="trailing" secondItem="kxt-k2-U04" secondAttribute="trailing" id="ohi-HF-bam"/>
+                            <constraint firstItem="CHX-Dd-gQM" firstAttribute="top" secondItem="vvm-Vv-jaF" secondAttribute="bottom" id="vdk-Gb-kMM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DR7-jK-pFP"/>
                     </view>
@@ -287,7 +298,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5x-og-P2i">
-                                <rect key="frame" x="21" y="27" width="39" height="39"/>
+                                <rect key="frame" x="21" y="27" width="52" height="52"/>
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <segue destination="2mf-Rc-3UP" kind="show" id="UEo-Hg-fc3"/>
@@ -460,12 +471,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="awards" width="375" height="375"/>
-        <image name="back" width="39" height="39"/>
-        <image name="clock" width="150" height="150"/>
-        <image name="next" width="39" height="39"/>
-        <image name="restart" width="375" height="375"/>
-        <image name="start2" width="48" height="48"/>
+        <image name="awards" width="500" height="500"/>
+        <image name="back" width="52" height="52"/>
+        <image name="clock" width="200" height="200"/>
+        <image name="next" width="52" height="52"/>
+        <image name="restart" width="500" height="500"/>
+        <image name="start2" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2FC-ao-01i"/>

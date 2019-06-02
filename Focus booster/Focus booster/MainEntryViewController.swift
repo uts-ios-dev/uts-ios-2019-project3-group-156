@@ -60,7 +60,7 @@ class MainEntryViewController: UIViewController {
         
         self.giveUpBtn.isEnabled = false
         self.giveUpBtn.isHidden = true
-        self.sentenceLabel.frame = CGRect(x: 0, y: 60, width: self.view.frame.width, height: 40)
+        self.sentenceLabel.frame = CGRect(x: 0, y: 50, width: self.view.frame.width, height: 40)
         
         // set color
         //self.view.backgroundColor = UIColor.gray
@@ -70,7 +70,7 @@ class MainEntryViewController: UIViewController {
         self.sentenceLabel.textColor = UIColor.white
         
         // set slider
-        let sliderFrame = CGRect(x: 0, y:sentenceLabel.frame.maxY, width: self.view.frame.width, height: 400)
+        let sliderFrame = CGRect(x: 0, y:sentenceLabel.frame.maxY + 20, width: self.view.frame.width, height: 400)
         circularSlider = CircularSlider(frame: sliderFrame)
         if let circularSlider = circularSlider{
             circularSlider.startAngle = 230
