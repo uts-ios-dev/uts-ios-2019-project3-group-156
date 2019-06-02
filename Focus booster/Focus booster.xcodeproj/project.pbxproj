@@ -135,6 +135,7 @@
 				F456761322952A8A009D9403 /* Focus_booster.xcdatamodeld */,
 				EF4B32C822968EFA002AC57C /* MainEntryViewController.swift */,
 				EF4B32CA22968F44002AC57C /* FinishedViewController.swift */,
+				F45892C522A2914000C634C0 /* AwardsViewController.swift */,
 				EF4B32CC22968FC8002AC57C /* OverviewViewController.swift */,
 				F6A5ADBD22A2670400FD31F4 /* firebaseManager.swift */,
 			);
@@ -405,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF4B32CB22968F44002AC57C /* FinishedViewController.swift in Sources */,
+				F45892C622A2914000C634C0 /* AwardsViewController.swift in Sources */,
 				F456760F22952A8A009D9403 /* ViewController.swift in Sources */,
 				F456761522952A8A009D9403 /* Focus_booster.xcdatamodeld in Sources */,
 				EF4B32C922968EFA002AC57C /* MainEntryViewController.swift in Sources */,

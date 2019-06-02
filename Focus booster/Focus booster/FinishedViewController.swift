@@ -8,7 +8,7 @@
 
 
 import UIKit
-let score = 5
+let score = 25
 
 class FinishedViewController: UIViewController {
     
@@ -29,11 +29,15 @@ class FinishedViewController: UIViewController {
             awards.image = UIImage(named:"three")
         }else if (score <= 110){
             awards.image = UIImage(named:"four")
-        }else if (score <= 160){
+        }else if (score > 110){
             awards.image = UIImage(named:"five")
         }
        
     }
     
+    @IBAction func taskLabelButton(_ sender: Any) {
+        
     
+        
+    }
 }
