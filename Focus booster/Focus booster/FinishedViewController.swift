@@ -17,6 +17,8 @@ class FinishedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         scoreLabel.text = "\(score)"
         
         if(score <= 10){
