@@ -23,6 +23,7 @@
 		F456761A22952A8B009D9403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F456761822952A8B009D9403 /* LaunchScreen.storyboard */; };
 		F456762522952A8B009D9403 /* Focus_boosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456762422952A8B009D9403 /* Focus_boosterTests.swift */; };
 		F456763022952A8B009D9403 /* Focus_boosterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456762F22952A8B009D9403 /* Focus_boosterUITests.swift */; };
+		F4F18F6722A3A20200FB272F /* AwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F18F6622A3A20200FB272F /* AwardsViewController.swift */; };
 		FB51973B3218866933557A1A /* Pods_Focus_boosterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A856B49911FCB99659698334 /* Pods_Focus_boosterTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		F456762B22952A8B009D9403 /* Focus boosterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Focus boosterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F456762F22952A8B009D9403 /* Focus_boosterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_boosterUITests.swift; sourceTree = "<group>"; };
 		F456763122952A8B009D9403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F18F6622A3A20200FB272F /* AwardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,9 +138,9 @@
 				F456761822952A8B009D9403 /* LaunchScreen.storyboard */,
 				F456761B22952A8B009D9403 /* Info.plist */,
 				F456761322952A8A009D9403 /* Focus_booster.xcdatamodeld */,
+				F4F18F6622A3A20200FB272F /* AwardsViewController.swift */,
 				EF4B32C822968EFA002AC57C /* MainEntryViewController.swift */,
 				EF4B32CA22968F44002AC57C /* FinishedViewController.swift */,
-				F45892C522A2914000C634C0 /* AwardsViewController.swift */,
 				EF4B32CC22968FC8002AC57C /* OverviewViewController.swift */,
 				EF05628C22A38B51007A9DDD /* FireBaseManager.swift */,
 				EF05629122A3956F007A9DDD /* ChartFormatter.swift */,
@@ -411,13 +413,13 @@
 			files = (
 				EF05628D22A38B51007A9DDD /* FireBaseManager.swift in Sources */,
 				EF4B32CB22968F44002AC57C /* FinishedViewController.swift in Sources */,
-				F45892C622A2914000C634C0 /* AwardsViewController.swift in Sources */,
 				F456760F22952A8A009D9403 /* ViewController.swift in Sources */,
 				F456761522952A8A009D9403 /* Focus_booster.xcdatamodeld in Sources */,
 				EF4B32C922968EFA002AC57C /* MainEntryViewController.swift in Sources */,
 				EF05629222A3956F007A9DDD /* ChartFormatter.swift in Sources */,
 				F456760D22952A8A009D9403 /* AppDelegate.swift in Sources */,
 				EF4B32CD22968FC8002AC57C /* OverviewViewController.swift in Sources */,
+				F4F18F6722A3A20200FB272F /* AwardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
