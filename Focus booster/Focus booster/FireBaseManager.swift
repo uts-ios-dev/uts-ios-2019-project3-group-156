@@ -40,9 +40,9 @@ class FireBaseManager {
                     let tag = data[Consts.tag]
                     let time = data[Consts.time]
                     let score = data[Consts.score]
-                    let result = [Consts.tag:tag,
-                                  Consts.time: time,
-                                    Consts.score: score
+                    let result = [Consts.tag:tag ?? "",
+                                  Consts.time: time ?? "",
+                                  Consts.score: score ?? ""
                         ] as [String : Any]
                     dict.append(result)
                 }

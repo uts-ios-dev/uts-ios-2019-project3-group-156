@@ -10,13 +10,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Focus booster/FinishedViewController.swift"
-            timestampString = "581157326.034639"
+            timestampString = "581163048.959945"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Focus booster/MainEntryViewController.swift"
+            timestampString = "581163048.960077"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "timerFunc()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Focus_booster.MainEntryViewController.timerFunc() -&gt; ()"
+                  moduleName = "Focus booster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kezhang/Desktop/gitProject3/uts-ios-2019-project3-group-156/Focus%20booster/Focus%20booster/MainEntryViewController.swift"
+                  timestampString = "581158424.164981"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "907">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Focus_booster.MainEntryViewController.timerFunc() -&gt; ()"
+                  moduleName = "Focus booster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kezhang/Desktop/gitProject3/uts-ios-2019-project3-group-156/Focus%20booster/Focus%20booster/MainEntryViewController.swift"
+                  timestampString = "581158424.167207"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "1097">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

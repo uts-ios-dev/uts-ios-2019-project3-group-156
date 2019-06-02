@@ -69,14 +69,6 @@ class MainEntryViewController: UIViewController {
         self.sentenceLabel.font = UIFont(name: MainEntryViewController.fontName , size: 20)
         self.sentenceLabel.textColor = UIColor.white
         
-        // set position
-        self.sentenceLabel.frame = CGRect(x: 0, y: 60, width: self.view.frame.width, height: 40)
-        self.timeLabel.frame = CGRect(x: 0, y: 510, width: self.view.frame.width, height: 30)
-        self.beginBtn.titleLabel?.font =  UIFont(name: MainEntryViewController.fontName , size: 20)
-        self.beginBtn.setTitleColor(UIColor.black, for: .normal)
-        self.giveUpBtn.titleLabel?.font =  UIFont(name: MainEntryViewController.fontName , size: 20)
-        self.giveUpBtn.setTitleColor(UIColor.black, for: .normal)
-        
         // set slider
         let sliderFrame = CGRect(x: 0, y:100, width: self.view.frame.width, height: 400)
         circularSlider = CircularSlider(frame: sliderFrame)
@@ -87,13 +79,25 @@ class MainEntryViewController: UIViewController {
             circularSlider.maximumValue = 120
             circularSlider.isClockwise = false
             circularSlider.color2 = UIColor.blue
-            circularSlider.color3 = UIColor.black
+            circularSlider.setLabelShadow(color: UIColor.black, opacity: 0.0, offset: CGSize(width: 0, height: 0), radius: 0)
       
           
             
             circularSlider.backgroundColor = UIColor.gray
             self.view.addSubview(circularSlider)
         }
+        
+        
+        // set position
+        self.sentenceLabel.frame = CGRect(x: 0, y: 60, width: self.view.frame.width, height: 40)
+        self.timeLabel.frame = CGRect(x: 0, y: circularSlider?.frame.maxY ?? 0 + 20, width: self.view.frame.width, height: 30)
+        self.beginBtn.titleLabel?.font =  UIFont(name: MainEntryViewController.fontName , size: 20)
+        self.beginBtn.setTitleColor(UIColor.black, for: .normal)
+        self.beginBtn.frame = CGRect(x: 0, y: timeLabel.frame.maxY + 20, width: self.view.frame.width, height: 30)
+        self.giveUpBtn.titleLabel?.font =  UIFont(name: MainEntryViewController.fontName , size: 20)
+        self.giveUpBtn.setTitleColor(UIColor.black, for: .normal)
+        self.giveUpBtn.frame = CGRect(x: 0, y: timeLabel.frame.maxY, width: self.view.frame.width, height: 30)
+        
         
     }
 
@@ -129,7 +133,7 @@ class MainEntryViewController: UIViewController {
         
         // count down
         timeRemaining -= 1
-        let minutesLeft = Int(timeRemaining) / 60 % 60
+        let minutesLeft = Int(timeRemaining) / 60
         let secondsLeft = Int(timeRemaining) % 60
         let minStr = String(format: "%.2d", minutesLeft)
         let secStr = String(format: "%.2d", secondsLeft)
@@ -217,7 +221,7 @@ class MainEntryViewController: UIViewController {
         
         // store data
         let timeToStore = timeSetted * 60 - timeRemaining
-        if (timeToStore >= 0 && tag != nil && self.score != nil){
+        if (timeToStore >= 0){
             FireBaseManager.shares.saveGameTime(time: timeToStore, tag: tag, score: self.score)
         }
         
