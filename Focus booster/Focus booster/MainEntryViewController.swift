@@ -18,7 +18,7 @@ class MainEntryViewController: UIViewController {
     @IBOutlet weak var giveUpBtn: UIButton!
     @IBOutlet weak var sentenceLabel: UILabel!
     
-    
+    var tag = "Working"
     var circularSlider : CircularSlider?
     var timer : Timer?
     var timerSentence : Timer?
@@ -84,16 +84,7 @@ class MainEntryViewController: UIViewController {
         }
         
     }
-    
-    
-    func alertFinish(){
-        let alert = UIAlertController(title: "Game is Over", message: nil, preferredStyle: .alert)
-    
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        
-        present(alert, animated: true)
-        
-    }
+
     
     func setTimer(){
         if (timer == nil){
@@ -209,17 +200,50 @@ class MainEntryViewController: UIViewController {
     @IBAction func tappedGiveup(_ sender: Any) {
         endGame()
         
+        // end timer
+        timer?.invalidate()
+        timer = nil
+            
+        timerSentence?.invalidate()
+        timerSentence = nil
+        
+        // push to next page
+        let finishedVC = FinishedViewController()
+        self.present(finishedVC, animated: true, completion: nil)
+        //self.navigationController?.pushViewController(finishedVC, animated: true)
+        
         // set begin button
+        /*
         beginBtn.isEnabled = true
         beginBtn.isHidden = false
         giveUpBtn.isEnabled = false
         giveUpBtn.isHidden = true
+ */
     }
     
     func endGame(){
         
         self.giveUpBtn.isHidden = true
         
+        // store data
+        let timeToStore = timeSetted * 60 - timeRemaining
+        if (timeToStore >= 0 && tag != nil && self.score != nil){
+            FireBaseManager.shares.saveGameTime(time: timeToStore, tag: tag, score: self.score)
+        }
+        
     }
+    
+    func alertGiveUp(){
+        
+    }
+    
+    
+    func alertFinish(){
+        let alert = UIAlertController(title: "Game is Over", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alert, animated: true)
+        
+    }
+    
     
 }

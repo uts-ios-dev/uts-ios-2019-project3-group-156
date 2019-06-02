@@ -60,6 +60,7 @@ class FireBaseManager {
       self.db.collection("users").document(self.currentId).collection(Consts.awards).document().setData(data)
         
         
+        
     }
     
     func getAwards(completion:@escaping ([Int])->Void){
