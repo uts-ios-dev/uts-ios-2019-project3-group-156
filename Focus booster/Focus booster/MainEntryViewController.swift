@@ -190,6 +190,18 @@ class MainEntryViewController: UIViewController {
         
     
         // test
+        /*
+        firebaseManager.shares.saveGameTime(time: 1200, tag: "Study", score: 95)
+        firebaseManager.shares.getGameTime(completion: { (data) in
+            for result in data{
+                if let tag = result["tag"],
+                    let time = result["time"],
+                    let score = result["score"]{
+                    print("tag:\(String(describing: tag)), time:\(String(describing: time)), score:\(score)")
+                }
+            }
+        })
+ */
     
         
     }
