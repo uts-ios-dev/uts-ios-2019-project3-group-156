@@ -18,7 +18,7 @@ class MainEntryViewController: UIViewController {
     @IBOutlet weak var giveUpBtn: UIButton!
     @IBOutlet weak var sentenceLabel: UILabel!
     
-    
+    var tag : String = "Working"
     var circularSlider : CircularSlider?
     var timer : Timer?
     var timerSentence : Timer?
@@ -46,6 +46,14 @@ class MainEntryViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         setupUI()
+        
+        // set tag
+        let currentTag = UserDefaults.standard.object(forKey: "currentTag")
+        if(currentTag != nil){
+            self.tag = String(describing: currentTag!)
+        }
+        
+        
     }
     
     func setupUI(){
@@ -84,16 +92,7 @@ class MainEntryViewController: UIViewController {
         }
         
     }
-    
-    
-    func alertFinish(){
-        let alert = UIAlertController(title: "Game is Over", message: nil, preferredStyle: .alert)
-    
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        
-        present(alert, animated: true)
-        
-    }
+
     
     func setTimer(){
         if (timer == nil){
@@ -119,6 +118,8 @@ class MainEntryViewController: UIViewController {
             
             timerSentence?.invalidate()
             timerSentence = nil
+            
+            alertFinish()
             return
         }
         
@@ -145,9 +146,6 @@ class MainEntryViewController: UIViewController {
         self.sentenceLabel.text = sentence
         
     }
-    
-    
-   
     
     func checkBeginTime() -> Bool{
         
@@ -187,23 +185,62 @@ class MainEntryViewController: UIViewController {
         beginBtn.isHidden = true
         giveUpBtn.isEnabled = true
         giveUpBtn.isHidden = false
+    
         
     }
     
     @IBAction func tappedGiveup(_ sender: Any) {
-        endGame()
+        alertGiveUp()
+    }
+    
+    func pushToNext(){
+        // push to next page
+        let storyboard = UIStoryboard(name:"Main", bundle: nil)
+        let authVC = storyboard.instantiateViewController(withIdentifier: "FinishedViewController") as? FinishedViewController
+        self.present(authVC!, animated: true, completion: nil)
         
-        // set begin button
-        beginBtn.isEnabled = true
-        beginBtn.isHidden = false
-        giveUpBtn.isEnabled = false
-        giveUpBtn.isHidden = true
     }
     
     func endGame(){
         
         self.giveUpBtn.isHidden = true
         
+        // end timer
+        timer?.invalidate()
+        timer = nil
+        timerSentence?.invalidate()
+        timerSentence = nil
+        
+        // store data
+        let timeToStore = timeSetted * 60 - timeRemaining
+        if (timeToStore >= 0 && tag != nil && self.score != nil){
+            FireBaseManager.shares.saveGameTime(time: timeToStore, tag: tag, score: self.score)
+        }
+        
     }
+    
+    func alertGiveUp(){
+        let alert = UIAlertController(title: "Will you Give Up?", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "NO", style: .cancel, handler: { (UIAlertAction) in
+            
+        }))
+        alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (UIAlertAction) in
+            self.endGame()
+            self.pushToNext()
+        }))
+        present(alert, animated: true)
+    }
+    
+    
+    func alertFinish(){
+        let alert = UIAlertController(title: "Game is Over", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (UIAlertAction) in
+            self.endGame()
+            self.pushToNext()
+        }))
+        present(alert, animated: true)
+        
+    }
+    
     
 }

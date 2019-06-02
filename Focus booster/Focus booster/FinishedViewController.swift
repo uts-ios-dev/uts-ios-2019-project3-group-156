@@ -17,13 +17,14 @@ class FinishedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         FireBaseManager.shares.getGameTime(completion: { (data) in
             for result in data{
-                let score = result["score"] as! Int
-                
-                if (score != nil){
+                if (result["score"] != nil){
+                    
+                    let score = result["score"] as! Int
                     self.scoreLabel.text = "\(score)"
+                    
                     
                     if(score <= 10){
                         self.awards.image = UIImage(named:"zero")
