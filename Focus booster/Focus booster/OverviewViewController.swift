@@ -47,31 +47,34 @@ class OverviewViewController: UIViewController {
                     
                 }
             }
+            self.barChartUpdate()
+            self.pieChartUpdate()
         })
-        
-        barChartUpdate()
-        pieChartUpdate()
+    
+        //
+       // pieChartUpdate()
       
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+
     func barChartUpdate () {
         var barChartEntries = [BarChartDataEntry]()
-        var counter:Double = 1
+        var counter:Double = 0.0
         for (key,value) in self.scoreAnalysisData {
             //print("\(key): \(value)")
             barChartEntries.append(BarChartDataEntry(x:counter,y:value))
-            counter += 1
+            counter = counter + 1
         }
         
         let dataSet = BarChartDataSet(entries: barChartEntries, label: "Types")
-        print(dataSet)
+        //print(dataSet)
         
         var formatter = ChartStringFormatter()
         var names:[String] = []
         for key in self.scoreAnalysisData.keys{
             names.append(key)
         }
-        print(names)
         formatter.nameValues = names
         barChart.xAxis.valueFormatter = formatter
         barChart.xAxis.granularity = 1
@@ -88,20 +91,25 @@ class OverviewViewController: UIViewController {
     }
     func pieChartUpdate () {
         //future home of pie chart code
-        let entry1 = PieChartDataEntry(value: Double(number1.value), label: "#1")
-        let entry2 = PieChartDataEntry(value: Double(number2.value), label: "#2")
-        let entry3 = PieChartDataEntry(value: Double(number3.value), label: "#3")
-        let dataSet = PieChartDataSet(entries: [entry1, entry2, entry3], label: "Types")
+        var pieChartEntries = [PieChartDataEntry]()
+        for (key,value) in self.timeAnalysisData {
+            //print("\(key): \(value)")
+            pieChartEntries.append(PieChartDataEntry(value:value,label:key))
+        }
+        
+        let dataSet = PieChartDataSet(entries: pieChartEntries, label: "Types")
+        //print(dataSet)gray
+
         dataSet.colors = ChartColorTemplates.joyful()
         //dataSet.valueColors = [UIColor.black]
-        pieChart.backgroundColor = UIColor.black
+        //pieChart.backgroundColor = UIColor.gray
         pieChart.holeColor = UIColor.clear
         pieChart.chartDescription?.textColor = UIColor.white
         pieChart.legend.textColor = UIColor.white
         
         pieChart.legend.font = UIFont(name: "Futura", size: 10)!
         pieChart.chartDescription?.font = UIFont(name: "Futura", size: 12)!
-        pieChart.chartDescription?.xOffset = pieChart.frame.width + 30
+        pieChart.chartDescription?.xOffset = pieChart.frame.width - 10
         pieChart.chartDescription?.yOffset = pieChart.frame.height * (2/3)
         pieChart.chartDescription?.textAlign = NSTextAlignment.left
         
