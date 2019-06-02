@@ -188,6 +188,10 @@ class MainEntryViewController: UIViewController {
         giveUpBtn.isEnabled = true
         giveUpBtn.isHidden = false
         
+    
+        // test
+    
+        
     }
     
     @IBAction func tappedGiveup(_ sender: Any) {

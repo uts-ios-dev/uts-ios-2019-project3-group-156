@@ -20,9 +20,9 @@ class FireBaseManager {
                     Consts.tag : tag,
                     Consts.score:score
             ] as [String : Any]
-        
+    
         db.collection("users").document(currentId).collection(Consts.gameTime).document().setData(data)
-    }
+   }
     
     // 用这个取数据
     func getGameTime(completion:@escaping ([[String:Any]])->Void){
@@ -42,7 +42,7 @@ class FireBaseManager {
                     let score = data[Consts.score]
                     let result = [Consts.tag:tag,
                                   Consts.time: time,
-                                  Consts.score: score
+                                    Consts.score: score
                         ] as [String : Any]
                     dict.append(result)
                 }
@@ -57,7 +57,7 @@ class FireBaseManager {
         let data = [Consts.award : award
             ] as [String : Any]
         
-        self.db.collection("users").document(self.currentId).collection(Consts.awards).document().setData(data)
+      self.db.collection("users").document(self.currentId).collection(Consts.awards).document().setData(data)
         
         
     }
@@ -77,7 +77,7 @@ class FireBaseManager {
                     if let award = award{
                         awards.append(award as! Int)
                     }
-                    
+                   
                 }
                 
                 completion(awards)
@@ -100,9 +100,8 @@ class FireBaseManager {
     }
     
     
-    
+   
     
     
     
 }
-
