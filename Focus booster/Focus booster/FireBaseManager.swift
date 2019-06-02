@@ -14,7 +14,7 @@ class FireBaseManager {
     
     let currentId = "currentUser"
     
-    // 用这个存数据
+    // save data
     func saveGameTime(time: Int, tag: String, score: Int){
         let data = [Consts.time : time,
                     Consts.tag : tag,
@@ -24,7 +24,7 @@ class FireBaseManager {
         db.collection("users").document(currentId).collection(Consts.gameTime).document().setData(data)
    }
     
-    // 用这个取数据
+    // read data
     func getGameTime(completion:@escaping ([[String:Any]])->Void){
         
         var dict = [[String:Any]]()

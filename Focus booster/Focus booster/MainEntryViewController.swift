@@ -18,7 +18,7 @@ class MainEntryViewController: UIViewController {
     @IBOutlet weak var giveUpBtn: UIButton!
     @IBOutlet weak var sentenceLabel: UILabel!
     
-    var tag = "Working"
+    var tag : String = "Working"
     var circularSlider : CircularSlider?
     var timer : Timer?
     var timerSentence : Timer?
@@ -46,6 +46,14 @@ class MainEntryViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         setupUI()
+        
+        // set tag
+        let currentTag = UserDefaults.standard.object(forKey: "currentTag")
+        if(currentTag != nil){
+            self.tag = String(describing: currentTag!)
+        }
+        
+        
     }
     
     func setupUI(){
@@ -177,21 +185,6 @@ class MainEntryViewController: UIViewController {
         beginBtn.isHidden = true
         giveUpBtn.isEnabled = true
         giveUpBtn.isHidden = false
-        
-    
-        // test
-        /*
-        firebaseManager.shares.saveGameTime(time: 1200, tag: "Study", score: 95)
-        firebaseManager.shares.getGameTime(completion: { (data) in
-            for result in data{
-                if let tag = result["tag"],
-                    let time = result["time"],
-                    let score = result["score"]{
-                    print("tag:\(String(describing: tag)), time:\(String(describing: time)), score:\(score)")
-                }
-            }
-        })
- */
     
         
     }
@@ -202,9 +195,9 @@ class MainEntryViewController: UIViewController {
     
     func pushToNext(){
         // push to next page
-        let finishedVC = FinishedViewController()
-        self.present(finishedVC, animated: true, completion: nil)
-        //self.navigationController?.pushViewController(finishedVC, animated: true)
+        let storyboard = UIStoryboard(name:"Main", bundle: nil)
+        let authVC = storyboard.instantiateViewController(withIdentifier: "FinishedViewController") as? FinishedViewController
+        self.present(authVC!, animated: true, completion: nil)
         
     }
     

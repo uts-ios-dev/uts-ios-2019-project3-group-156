@@ -201,7 +201,7 @@
         <!--Finished View Controller-->
         <scene sceneID="KuM-SD-sA1">
             <objects>
-                <viewController id="0rz-Yf-K73" customClass="FinishedViewController" customModule="Focus_booster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FinishedViewController" id="0rz-Yf-K73" customClass="FinishedViewController" customModule="Focus_booster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bY4-jj-9nL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
