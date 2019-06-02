@@ -60,17 +60,17 @@ class MainEntryViewController: UIViewController {
         
         self.giveUpBtn.isEnabled = false
         self.giveUpBtn.isHidden = true
-       
+        self.sentenceLabel.frame = CGRect(x: 0, y: 60, width: self.view.frame.width, height: 40)
         
         // set color
-        self.view.backgroundColor = UIColor.gray
+        //self.view.backgroundColor = UIColor.gray
         self.timeLabel.textColor = UIColor.white
         self.timeLabel.font = UIFont(name: MainEntryViewController.fontName , size: 30)
         self.sentenceLabel.font = UIFont(name: MainEntryViewController.fontName , size: 20)
         self.sentenceLabel.textColor = UIColor.white
         
         // set slider
-        let sliderFrame = CGRect(x: 0, y:100, width: self.view.frame.width, height: 400)
+        let sliderFrame = CGRect(x: 0, y:sentenceLabel.frame.maxY, width: self.view.frame.width, height: 400)
         circularSlider = CircularSlider(frame: sliderFrame)
         if let circularSlider = circularSlider{
             circularSlider.startAngle = 230
@@ -80,20 +80,16 @@ class MainEntryViewController: UIViewController {
             circularSlider.isClockwise = false
             circularSlider.color2 = UIColor.blue
             circularSlider.setLabelShadow(color: UIColor.black, opacity: 0.0, offset: CGSize(width: 0, height: 0), radius: 0)
-      
-          
-            
-            circularSlider.backgroundColor = UIColor.gray
+            //circularSlider.backgroundColor = UIColor.gray
             self.view.addSubview(circularSlider)
         }
         
         
         // set position
-        self.sentenceLabel.frame = CGRect(x: 0, y: 60, width: self.view.frame.width, height: 40)
-        self.timeLabel.frame = CGRect(x: 0, y: circularSlider?.frame.maxY ?? 0 + 20, width: self.view.frame.width, height: 30)
+        self.timeLabel.frame = CGRect(x: 0, y: circularSlider?.frame.maxY ?? 0 + 10, width: self.view.frame.width, height: 30)
         self.beginBtn.titleLabel?.font =  UIFont(name: MainEntryViewController.fontName , size: 20)
         self.beginBtn.setTitleColor(UIColor.black, for: .normal)
-        self.beginBtn.frame = CGRect(x: 0, y: timeLabel.frame.maxY + 20, width: self.view.frame.width, height: 30)
+        self.beginBtn.frame = CGRect(x: 0, y: timeLabel.frame.maxY, width: self.view.frame.width, height: 30)
         self.giveUpBtn.titleLabel?.font =  UIFont(name: MainEntryViewController.fontName , size: 20)
         self.giveUpBtn.setTitleColor(UIColor.black, for: .normal)
         self.giveUpBtn.frame = CGRect(x: 0, y: timeLabel.frame.maxY, width: self.view.frame.width, height: 30)

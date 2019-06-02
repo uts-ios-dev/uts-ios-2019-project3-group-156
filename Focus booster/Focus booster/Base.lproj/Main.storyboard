@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -97,83 +97,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-Dd-gQM">
-                                <rect key="frame" x="128" y="549" width="119" height="30"/>
-=======
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-Dd-gQM">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-Dd-gQM">
                                 <rect key="frame" x="181" y="544" width="52" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
->>>>>>> 870e613bc96d0339473b90f7736e7b4a2df6038d
                                 <state key="normal" title="Begin"/>
                                 <connections>
                                     <action selector="tappedBegin:" destination="2mf-Rc-3UP" eventType="touchUpInside" id="eUE-c6-anY"/>
                                 </connections>
                             </button>
-<<<<<<< HEAD
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvm-Vv-jaF">
-                                <rect key="frame" x="75" y="490" width="224" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxt-k2-U04">
-                                <rect key="frame" x="118" y="587" width="139" height="30"/>
-=======
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxt-k2-U04">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxt-k2-U04">
                                 <rect key="frame" x="118" y="587" width="178" height="30"/>
->>>>>>> 870e613bc96d0339473b90f7736e7b4a2df6038d
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Give Up"/>
                                 <connections>
                                     <action selector="tappedGiveup:" destination="2mf-Rc-3UP" eventType="touchUpInside" id="Q46-Al-BGj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfl-T5-azi">
-<<<<<<< HEAD
-                                <rect key="frame" x="93" y="57" width="0.0" height="0.0"/>
-=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfl-T5-azi">
                                 <rect key="frame" x="93" y="57" width="228" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Xng-VV-w3O"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvm-Vv-jaF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvm-Vv-jaF">
                                 <rect key="frame" x="75" y="625" width="264" height="20"/>
->>>>>>> 870e613bc96d0339473b90f7736e7b4a2df6038d
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-<<<<<<< HEAD
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="CHX-Dd-gQM" firstAttribute="leading" secondItem="DR7-jK-pFP" secondAttribute="leading" constant="128" id="1XZ-nw-eXp"/>
-                            <constraint firstAttribute="trailing" secondItem="Zfl-T5-azi" secondAttribute="trailing" constant="321" id="2sx-i2-4gk"/>
-                            <constraint firstItem="Zfl-T5-azi" firstAttribute="leading" secondItem="DR7-jK-pFP" secondAttribute="leading" constant="93" id="ZD3-wr-hB1"/>
-                            <constraint firstItem="kxt-k2-U04" firstAttribute="top" secondItem="CHX-Dd-gQM" secondAttribute="bottom" constant="8" id="gOe-dd-xEe"/>
-                            <constraint firstItem="Zfl-T5-azi" firstAttribute="top" secondItem="DR7-jK-pFP" secondAttribute="top" constant="37" id="qF2-Rs-mkR"/>
-                            <constraint firstItem="DR7-jK-pFP" firstAttribute="trailing" secondItem="CHX-Dd-gQM" secondAttribute="trailing" constant="167" id="x2E-OG-5fe"/>
-=======
                         <color key="backgroundColor" red="0.39254450800000001" green="0.57576900720000002" blue="0.60393053289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="CHX-Dd-gQM" firstAttribute="centerX" secondItem="DR7-jK-pFP" secondAttribute="centerX" id="84p-TM-wAQ"/>
-                            <constraint firstItem="vvm-Vv-jaF" firstAttribute="leading" secondItem="DR7-jK-pFP" secondAttribute="leading" constant="75" id="9Bb-1E-aN7"/>
-                            <constraint firstItem="Zfl-T5-azi" firstAttribute="top" secondItem="DR7-jK-pFP" secondAttribute="top" constant="37" id="DzL-U7-Ffa"/>
-                            <constraint firstItem="kxt-k2-U04" firstAttribute="centerX" secondItem="vvm-Vv-jaF" secondAttribute="centerX" id="JGj-zc-yBU"/>
-                            <constraint firstItem="kxt-k2-U04" firstAttribute="centerX" secondItem="Zfl-T5-azi" secondAttribute="centerX" id="LMW-Cy-AU7"/>
-                            <constraint firstItem="DR7-jK-pFP" firstAttribute="bottom" secondItem="kxt-k2-U04" secondAttribute="bottom" constant="119" id="Las-MO-Nty"/>
-                            <constraint firstItem="vvm-Vv-jaF" firstAttribute="top" secondItem="kxt-k2-U04" secondAttribute="bottom" constant="8" symbolic="YES" id="Ueg-TV-Kem"/>
-                            <constraint firstItem="Zfl-T5-azi" firstAttribute="leading" secondItem="DR7-jK-pFP" secondAttribute="leading" constant="93" id="X7T-5D-LNP"/>
-                            <constraint firstItem="kxt-k2-U04" firstAttribute="leading" secondItem="DR7-jK-pFP" secondAttribute="leading" constant="118" id="a2o-ti-uap"/>
-                            <constraint firstItem="kxt-k2-U04" firstAttribute="centerX" secondItem="DR7-jK-pFP" secondAttribute="centerX" id="qVG-9L-nJM"/>
-                            <constraint firstItem="kxt-k2-U04" firstAttribute="top" secondItem="CHX-Dd-gQM" secondAttribute="bottom" constant="8" symbolic="YES" id="z49-bc-O0a"/>
->>>>>>> 870e613bc96d0339473b90f7736e7b4a2df6038d
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DR7-jK-pFP"/>
                     </view>
                     <connections>
@@ -323,7 +279,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5x-og-P2i">
-                                <rect key="frame" x="21" y="27" width="79" height="39"/>
+                                <rect key="frame" x="21" y="27" width="92" height="52"/>
                                 <state key="normal" title="Back" image="back"/>
                                 <connections>
                                     <segue destination="2mf-Rc-3UP" kind="show" id="UEo-Hg-fc3"/>
@@ -484,8 +440,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="39" height="39"/>
-        <image name="clock" width="150" height="150"/>
+        <image name="back" width="52" height="52"/>
+        <image name="clock" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2FC-ao-01i"/>

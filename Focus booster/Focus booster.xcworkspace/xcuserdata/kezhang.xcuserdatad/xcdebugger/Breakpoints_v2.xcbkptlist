@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Focus booster/MainEntryViewController.swift"
-            timestampString = "581163048.960077"
+            timestampString = "581167108.578746"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "timerFunc()"
             landmarkType = "7">
             <Locations>
