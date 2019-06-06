@@ -18,6 +18,8 @@ class MainEntryViewController: UIViewController {
     @IBOutlet weak var giveUpBtn: UIButton!
     @IBOutlet weak var sentenceLabel: UILabel!
     
+    static var appDidEnterBackGround = false
+    
     var tag : String = "Working"
     var circularSlider : CircularSlider?
     var timer : Timer?
@@ -52,8 +54,37 @@ class MainEntryViewController: UIViewController {
         if(currentTag != nil){
             self.tag = String(describing: currentTag!)
         }
-        
-        
+    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(getNotification(notification:)), name: NSNotification.Name(rawValue: "Active"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(getNotification(notification:)), name: NSNotification.Name(rawValue: "EnterBackGround"), object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "Active"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "EnterBackGround"), object: nil)
+    }
+    
+    @objc func getNotification(notification: Notification){
+        if(notification.name.rawValue == "Active"){
+            /*
+            if (MainEntryViewController.appDidEnterBackGround && timer != nil){
+                alertBackFail()
+            }
+            
+            MainEntryViewController.appDidEnterBackGround = false
+             */
+            
+        }
+        else if(notification.name.rawValue == "EnterBackGround"){
+            if(timer != nil){
+                alertBackFail()
+            }
+        }
     }
     
     func setupUI(){
@@ -244,6 +275,18 @@ class MainEntryViewController: UIViewController {
         }))
         present(alert, animated: true)
         
+    }
+    
+    func alertBackFail(){
+        
+        self.endGame()
+        let alert = UIAlertController(title: "Welcome back, you failed this game!", message: nil, preferredStyle: .alert)
+       
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+            //self.endGame()
+            self.pushToNext()
+        }))
+        present(alert, animated: true)
     }
     
     
